@@ -1,0 +1,66 @@
+div{
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+    border: solid black 2px;
+    
+}
+
+div:nth-of-type(2n){
+    background-color: rgb(74, 74, 56);
+}
+
+div:nth-of-type(2n){
+    background-color: rgb(198, 125, 56);
+}
+#two{
+    transform: rotate(45deg);
+}
+
+#four{
+    transform: rotate(135deg);
+}
+h1{
+    text-align:center;
+    color: red;
+    text-decoration: underline;
+}
+
+#hello{
+    transform: scale(0.5);
+
+}
+
+#hello{
+    transform: scale(0.5,0.9);
+    box-shadow: 2px 2px 5px green;
+
+}
+#hii{
+
+    transform: translate(100px,10px);
+     box-shadow: 5px 5px 15px rgb(71, 4, 39);
+}
+#five{
+    transform: skew(30deg);
+}
+#box-shadow{
+    box-shadow: 10px 10px 5px rgb(71, 4, 39);
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#img{
+    background-image: url("https://t4.ftcdn.net/jpg/02/79/67/37/360_F_279673798_itmQUSrwFy7mldM3eqyZ5McwhHaNSds0.jpg");
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    background-size: cover;
+}

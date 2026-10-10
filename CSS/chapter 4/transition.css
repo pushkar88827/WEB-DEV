@@ -1,0 +1,22 @@
+div{
+    height: 50px; 
+    width: 200px;
+    text-align: center;
+    padding-top: 20px;
+    background-color: chartreuse;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+    text-decoration: underline black;
+    margin-top: 10px;
+    margin: 0 auto;
+
+}
+
+div:hover{
+    background-color: rgb(188, 77, 77);
+    border-radius: 10%;
+    transition-timing-function: ease-in-out;
+    margin-top: 400px;
+    
+
+}

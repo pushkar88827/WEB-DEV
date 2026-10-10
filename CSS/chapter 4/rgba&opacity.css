@@ -1,0 +1,28 @@
+#st{
+    height: 200px;
+    width: 200px;
+    background-color:rgba(255, 0, 0, 1) ;
+}
+
+#nd{
+    height: 200px;
+    width: 200px;
+    background-color:rgba(255, 0, 0, 0.5) ;
+}
+#rd{
+    height: 200px;
+    width: 200px;
+    background-color:rgba(255, 0, 0, 0) ;
+}
+div{
+    display: inline-block;
+}
+
+#opq{
+    height: 200px;
+    width: 200px;
+    background-color:rgba(0, 255, 0) ;
+    opacity: 0.5;
+
+
+}
