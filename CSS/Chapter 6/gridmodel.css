@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.container{
+    background-color: rgb(212, 212, 177);
+    height: 500px;
+    width: 300px;
+    border: 2px solid black;
+     display: grid;
+     gap: 10px;
+    place-items: center;
+
+}
+
+.item{
+    background-color: rgb(119, 118, 180);
+    height: 80px;
+    width: 80px;
+    border: 2px solid rgb(21, 21, 21);
+    text-align: center;
+    
+}
