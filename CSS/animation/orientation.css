@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(213, 213, 158);
+}
+h1{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    border: 2px black solid;
+}
+p{
+    font-weight: bold;
+    color: rgb(39, 30, 30);
+}
+
+@media(min-width:400px){
+    h1{
+        background-color: rgb(21, 60, 113);
+        color: white;
+        
+    }
+    div{
+        height: 200px;
+        width: 200px;
+        background-color: blueviolet
+    }
+}
+
+@media(max-width:400px){
+    h1{
+        background-color: rgb(5, 4, 4);
+        color: white;
+        
+    }
+    div{
+        height: 200px;
+        width: 200px;
+        background-color: rgb(13, 104, 104)
+    }
+}
+
+@media (orientation: landscape) {
+    h1{
+        color: rgb(1, 1, 1);
+        background-color: brown;
+    }
+
+    
+}
