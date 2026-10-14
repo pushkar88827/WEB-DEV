@@ -1,0 +1,38 @@
+.conatiner{
+    background-color: pink;
+    height: 200px;
+    width: 300px;
+
+    /* animation-name: fontAnimation; */
+    animation-name: colorAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay:0;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+}
+/* @keyframes fontAnimation {
+    from {
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+
+    from{
+        background-color: blue;
+    }
+    to{
+        background-color: red;
+    }
+} */
+
+@keyframes colorAnimate  {
+    from{
+        color: brown;
+    }
+    to{
+        color: blueviolet;
+    }
+    
+}
