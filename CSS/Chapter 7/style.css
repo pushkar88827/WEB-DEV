@@ -6,4 +6,80 @@
 .main_box{
     background: url(photo.jpg);
     height: 100vh;
+    background-size: cover;
+
+}
+
+.btn_one{
+    color:white;
+    font-size: 30px;
+    font-weight: 400;
+    /* position: absolute; */
+    left: 16px;
+    line-height:16px ;
+
+}
+.sidebar_menu{
+    position: fixed;
+    /* left: -350px; */
+    height: 100vh;   
+    width: 300px;
+    background-color: rgba(255, 255,255,0.1);
+    box-shadow:0 0 2px rgba(255, 255,255,0.5) ;
+
+
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    box-shadow:0 0 2px rgba(255, 255,255,0.5);
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.sidebar_menu .menu{
+    position: absolute;
+    color: white;
+    top: 50px;
+
+}
+
+.sidebar_menu .btn_two {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 25px;
+  line-height: 60px;
+  color: grey;
+  opacity: 0;
+}
+
+.sidebar_menu .menu li{
+    margin: 6px;
+    padding: 14px 20px;
+
+}
+
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar_menu .menu i{
+    padding-right: 5px;
+}
+.sidebar_menu .social_media{
+    color: white;
+    opacity: 0.4;
+    position: absolute;
+    left: 25%;
+    bottom: 70px;
+
 }
