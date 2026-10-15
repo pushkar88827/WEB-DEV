@@ -1,0 +1,36 @@
+h1{
+    color: #ff0000;
+    text-align: center;
+    font-weight: bold;
+    
+    
+}
+h2{
+    color: rgb(0, 149, 82);
+    text-align: left;
+    font-weight: normal;
+    text-decoration:  red underline;
+    line-height: normal;
+
+}
+h3{
+    color: blue;
+    text-align: justify;
+    font-weight: 500;
+    text-decoration: rgb(105, 105, 121)  line-through;
+    line-height: 10px;
+    letter-spacing: 2px;
+}
+p{
+    text-align: start;
+    font-weight: lighter;
+    text-decoration: red dotted  underline;
+}
+li{
+    text-align:start;
+    color: chocolate;
+    font-weight: bolder;
+}
+a{
+    text-decoration: no;
+}
