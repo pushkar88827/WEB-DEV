@@ -1,7 +1,5 @@
-let string = "  Hello  ";
+// let string = "  Hello  ";
+// console.log(string.trim());
 
-// string
-// '  Hello  '
-
-// string.trim()
-// 'Hello'
+let password = prompt("Set your password");
+console.log(password.trim());
