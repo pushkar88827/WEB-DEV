@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Const Array</title>
+</head>
+<body>
+
+    <h1>JavaScript Constant Array</h1>
+
+    <h2>1. Declaring a Const Array</h2>
+    <pre>
+const fruits = ["Apple", "Mango", "Banana"];
+
+console.log(fruits);
+    </pre>
+
+    <h2>2. Changing Array Elements</h2>
+    <pre>
+const numbers = [10, 20, 30];
+
+numbers[0] = 100;
+numbers.push(40);
+
+console.log(numbers);
+// [100, 20, 30, 40]
+    </pre>
+
+    <h2>3. Reassigning a Const Array</h2>
+    <pre>
+const colors = ["Red", "Blue"];
+
+// This causes a TypeError:
+// colors = ["Green", "Yellow"];
+    </pre>
+
+    <h2>4. Const Array References</h2>
+    <pre>
+const a = [1, 2, 3];
+const b = a;
+
+b.push(4);
+
+console.log(a); // [1, 2, 3, 4]
+console.log(b); // [1, 2, 3, 4]
+    </pre>
+
+    <h2>5. Freezing an Array</h2>
+    <pre>
+const days = Object.freeze(["Monday", "Tuesday"]);
+
+// Changes to the array are prevented.
+console.log(days);
+    </pre>
+
+    <script src="const-array.js"></script>
+
+</body>
+</html>
