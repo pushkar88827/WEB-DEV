@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array References</title>
+</head>
+<body>
+    <h1>JavaScript Array References</h1>
+
+    <h2>1. Array Reference</h2>
+    <p>Two variables can refer to the same array.</p>
+    <pre>
+let arr1 = [10, 20, 30];
+let arr2 = arr1;
+
+arr2.push(40);
+
+console.log(arr1); // [10, 20, 30, 40]
+console.log(arr2); // [10, 20, 30, 40]
+    </pre>
+
+    <h2>2. Changing Array Elements</h2>
+    <pre>
+let a = [1, 2, 3];
+let b = a;
+
+b[0] = 100;
+
+console.log(a); // [100, 2, 3]
+console.log(b); // [100, 2, 3]
+    </pre>
+
+    <h2>3. Copy Array Using Spread Operator</h2>
+    <pre>
+let a = [1, 2, 3];
+let b = [...a];
+
+b[0] = 100;
+
+console.log(a); // [1, 2, 3]
+console.log(b); // [100, 2, 3]
+    </pre>
+
+    <h2>4. Copy Array Using slice()</h2>
+    <pre>
+let a = [1, 2, 3];
+let b = a.slice();
+
+b.push(4);
+
+console.log(a); // [1, 2, 3]
+console.log(b); // [1, 2, 3, 4]
+    </pre>
+
+    <h2>5. Comparing Arrays</h2>
+    <pre>
+let a = [1, 2, 3];
+let b = [1, 2, 3];
+let c = a;
+
+console.log(a === b); // false
+console.log(a === c); // true
+    </pre>
+
+    <h2>6. Shallow Copy with Nested Arrays</h2>
+    <pre>
+let original = [[1, 2], [3, 4]];
+let copy = [...original];
+
+copy[0].push(99);
+
+console.log(original); // [[1, 2, 99], [3, 4]]
+console.log(copy);     // [[1, 2, 99], [3, 4]]
+    </pre>
+
+    <script src="refrences.js"></script>
+</body>
+</html>
