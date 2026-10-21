@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #cbd5e1;
+}
+
+main {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 0 16px;
+}
+
+section {
+    background: white;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000a;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin: 16px 0 8px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 12px 0;
+}
+
+li {
+    margin-left: 22px;
+    margin-bottom: 8px;
+}
+
+.note {
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    padding: 14px;
+    margin-top: 12px;
+}
+
+.warning {
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+    padding: 14px;
+    margin-top: 12px;
+}
+
+.output {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th, td {
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+}
+
+th {
+    background: #dbeafe;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 12px 5px 0 0;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 17px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
