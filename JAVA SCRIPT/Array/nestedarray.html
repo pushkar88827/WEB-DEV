@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Nested Arrays</title>
+</head>
+<body>
+
+    <h1>JavaScript Nested Arrays</h1>
+
+    <h2>1. What is a Nested Array?</h2>
+    <p>An array inside another array is called a nested array.</p>
+    <pre><code>const arr = [
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90]
+];
+
+console.log(arr);</code></pre>
+
+    <h2>2. Accessing Nested Array Elements</h2>
+    <pre><code>const arr = [
+    [10, 20, 30],
+    [40, 50, 60]
+];
+
+console.log(arr[0]);    // [10, 20, 30]
+console.log(arr[0][1]); // 20
+console.log(arr[1][2]); // 60</code></pre>
+
+    <h2>3. Changing Nested Array Elements</h2>
+    <pre><code>const arr = [
+    [1, 2],
+    [3, 4]
+];
+
+arr[0][1] = 100;
+
+console.log(arr);
+// [[1, 100], [3, 4]]</code></pre>
+
+    <h2>4. Adding Elements</h2>
+    <pre><code>const arr = [
+    [10, 20],
+    [30, 40]
+];
+
+arr[0].push(50);
+arr.push([60, 70]);
+
+console.log(arr);
+// [[10, 20, 50], [30, 40], [60, 70]]</code></pre>
+
+    <h2>5. Nested Array Using Loops</h2>
+    <pre><code>const arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+        console.log(arr[i][j]);
+    }
+}</code></pre>
+
+    <h2>6. Nested Array as a Matrix</h2>
+    <pre><code>const matrix = [
+    [1, 2],
+    [3, 4]
+];
+
+console.log("First row:", matrix[0]);
+console.log("Second row:", matrix[1]);
+console.log("Element at row 2, column 1:", matrix[1][0]);</code></pre>
+
+    <h2>7. Nested Array References</h2>
+    <pre><code>const original = [[1, 2], [3, 4]];
+const copy = [...original];
+
+copy[0][0] = 100;
+
+console.log(original); // [[100, 2], [3, 4]]
+console.log(copy);     // [[100, 2], [3, 4]]</code></pre>
+
+    <p>Note: The spread operator makes a shallow copy. The inner arrays are still shared.</p>
+
+    <script src="nestedarray.js"></script>
+</body>
+</html>
