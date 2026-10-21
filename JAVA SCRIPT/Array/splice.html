@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array splice() Notes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            background: white;
+            padding: 24px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0000000a;
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            margin: 18px 0 8px;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+        .output {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 12px 16px;
+            border-radius: 5px;
+            margin: 12px 0;
+        }
+
+        .note {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 14px;
+            margin: 14px 0;
+            border-radius: 5px;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 14px;
+            margin: 14px 0;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        th {
+            background: #dbeafe;
+        }
+
+        li {
+            margin-left: 22px;
+            margin-bottom: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 8px 5px 0 0;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #demoOutput {
+            margin-top: 14px;
+            white-space: pre-wrap;
+            font-weight: bold;
+            color: #047857;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            section {
+                padding: 17px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Array splice()</h1>
+    <p>Complete Notes | Beginner Friendly | Hinglish</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>1. What is splice()?</h2>
+
+        <p>
+            JavaScript mein <b>splice()</b> method ka use array mein
+            elements ko remove, add ya replace karne ke liye hota hai.
+        </p>
+
+        <div class="warning">
+            <b>Important:</b> splice() original array ko modify karta hai.
+        </div>
+
+        <p>
+            Iska matlab hai ki splice() use karne ke baad original
+            array ke elements change ho sakte hain.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Syntax</h2>
+
+        <pre><code>array.splice(start, deleteCount, item1, item2, ...);</code></pre>
+
+        <ul>
+            <li><b>start:</b> Jis index se changes shuru honge.</li>
+            <li><b>deleteCount:</b> Kitne elements remove karne hain.</li>
+            <li><b>item1, item2:</b> Optional naye elements jo add karne hain.</li>
+        </ul>
+
+        <div class="note">
+            splice() removed elements ka ek array return karta hai.
+            Agar koi element remove nahi hua, toh empty array return hota hai.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Remove Elements</h2>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+let removed = numbers.splice(1, 2);
+
+console.log(removed);
+console.log(numbers);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[20, 30]
+[10, 40, 50]</code></pre>
+        </div>
+
+        <h3>Dry Run</h3>
+
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>10</td>
+                <td>Unchanged</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>20</td>
+                <td>Removed</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>30</td>
+                <td>Removed</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>40</td>
+                <td>Shifts to index 1</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>50</td>
+                <td>Shifts to index 2</td>
+            </tr>
+        </table>
+
+        <p>
+            <code>splice(1, 2)</code> ka matlab index 1 se start karke
+            2 elements remove karna.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Add Elements</h2>
+
+        <p>
+            Agar deleteCount 0 hai, toh elements remove nahi honge.
+            Naye elements specified index par add honge.
+        </p>
+
+        <pre><code>let fruits = ["Apple", "Banana", "Orange"];
+
+fruits.splice(1, 0, "Mango");
+
+console.log(fruits);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>["Apple", "Mango", "Banana", "Orange"]</code></pre>
+        </div>
+
+        <p>
+            Index 1 par Mango add hua. Baaki elements aage shift ho gaye.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. Replace Elements</h2>
+
+        <pre><code>let colors = ["Red", "Blue", "Green"];
+
+colors.splice(1, 1, "Yellow");
+
+console.log(colors);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>["Red", "Yellow", "Green"]</code></pre>
+        </div>
+
+        <p>
+            Index 1 se ek element remove hua aur uski jagah Yellow add hua.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Remove All Elements From an Index</h2>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+let removed = numbers.splice(2);
+
+console.log(removed);
+console.log(numbers);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[30, 40, 50]
+[10, 20]</code></pre>
+        </div>
+
+        <p>
+            Jab deleteCount nahi dete, toh start index se lekar
+            array ke end tak saare elements remove ho jaate hain.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. Negative Index</h2>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+numbers.splice(-2, 1);
+
+console.log(numbers);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[10, 20, 30, 50]</code></pre>
+        </div>
+
+        <p>
+            Negative start index array ke end se count hota hai.
+            Yahan -2 ka matlab index 3, yaani value 40.
+        </p>
+    </section>
+
+    <section>
+        <h2>8. slice() vs splice()</h2>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>slice()</th>
+                <th>splice()</th>
+            </tr>
+            <tr>
+                <td>Purpose</td>
+                <td>Array ka part copy karna</td>
+                <td>Add, remove, replace karna</td>
+            </tr>
+            <tr>
+                <td>Original array</td>
+                <td>Unchanged</td>
+                <td>Modified</td>
+            </tr>
+            <tr>
+                <td>Arguments</td>
+                <td>start, end</td>
+                <td>start, deleteCount, items</td>
+            </tr>
+            <tr>
+                <td>Return value</td>
+                <td>Selected elements ka new array</td>
+                <td>Removed elements ka array</td>
+            </tr>
+        </table>
+
+        <div class="note">
+            <b>Memory Trick:</b><br>
+            slice = Copy a part<br>
+            splice = Change the original
+        </div>
+    </section>
+
+    <section>
+        <h2>9. Try It Yourself</h2>
+
+        <p>
+            Buttons click karke dekho ki splice() array ko kaise change karta hai.
+        </p>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+// Remove 2 elements starting at index 1
+let removed = numbers.splice(1, 2);</code></pre>
+
+        <button onclick="removeElements()">Remove Elements</button>
+        <button onclick="addElement()">Add Element</button>
+        <button onclick="resetArray()">Reset</button>
+
+        <div id="demoOutput"></div>
+
+        <script>
+            let demoNumbers = [10, 20, 30, 40, 50];
+
+            function displayArray(message) {
+                document.getElementById("demoOutput").textContent =
+                    message +
+                    "\nCurrent array: " + JSON.stringify(demoNumbers);
+            }
+
+            function removeElements() {
+                let removed = demoNumbers.splice(1, 2);
+
+                displayArray("Removed: " + JSON.stringify(removed));
+            }
+
+            function addElement() {
+                demoNumbers.splice(1, 0, 99);
+
+                displayArray("Added 99 at index 1.");
+            }
+
+            function resetArray() {
+                demoNumbers = [10, 20, 30, 40, 50];
+
+                displayArray("Array reset.");
+            }
+
+            displayArray("Original array.");
+        </script>
+    </section>
+
+    <section>
+        <h2>10. Practice Questions</h2>
+
+        <ol>
+            <li>
+                [5, 10, 15, 20, 25] mein se index 2 par
+                2 elements remove karo.
+            </li>
+            <li>
+                ["HTML", "CSS", "Python"] mein index 1 par
+                "JavaScript" add karo bina kisi element ko remove kiye.
+            </li>
+            <li>
+                [10, 20, 30] mein 20 ko 99 se replace karo.
+            </li>
+            <li>
+                [1, 2, 3, 4, 5] par splice(2) ka output predict karo.
+            </li>
+            <li>
+                splice() ka return value kya hota hai jab
+                koi element remove nahi hota?
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Quick Revision</h2>
+
+        <ul>
+            <li>splice() original array ko modify karta hai.</li>
+            <li>Elements remove, add aur replace kar sakte ho.</li>
+            <li>deleteCount removed elements ki sankhya batata hai.</li>
+            <li>Removed elements ek new array mein return hote hain.</li>
+            <li>Negative start index end se count hota hai.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>JavaScript Learning Notes | Pushkar Kumar</p>
+    <p>Learn • Practice • Build • Repeat 🚀</p>
+</footer>
+<script src="splice.js"></script>
+
+</body>
+</html>
