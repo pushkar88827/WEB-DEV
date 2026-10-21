@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Slice() Notes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #cbd5e1;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 16px;
+        }
+
+        section {
+            background: white;
+            padding: 24px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0000000a;
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            margin: 18px 0 8px;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+        .output {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 12px 16px;
+            border-radius: 5px;
+            margin: 12px 0;
+        }
+
+        .note {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 14px;
+            margin: 14px 0;
+            border-radius: 5px;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 14px;
+            margin: 14px 0;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+        }
+
+        th {
+            background: #dbeafe;
+        }
+
+        .practice li {
+            margin: 10px 0 10px 22px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #demoOutput {
+            margin-top: 12px;
+            font-weight: bold;
+            color: #047857;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            section {
+                padding: 17px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Array slice()</h1>
+    <p>Complete Notes | Beginner Friendly | Hinglish</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>1. What is slice()?</h2>
+
+        <p>
+            JavaScript mein <b>slice()</b> method ka use array ke
+            kisi specific part ko copy karke ek new array banane ke
+            liye hota hai.
+        </p>
+
+        <div class="note">
+            <b>Important:</b> slice() original array ko change nahi karta.
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Syntax</h2>
+
+        <pre><code>array.slice(start, end);</code></pre>
+
+        <ul>
+            <li><b>start:</b> Jis index se elements lena shuru karna hai.</li>
+            <li><b>end:</b> Jis index se pehle elements lene band karne hain.</li>
+            <li>Dono parameters optional hain.</li>
+        </ul>
+
+        <div class="warning">
+            <b>Golden Rule:</b> Start index include hota hai,
+            lekin end index exclude hota hai.
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Basic Example</h2>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+let result = numbers.slice(1, 4);
+
+console.log(result);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[20, 30, 40]</code></pre>
+        </div>
+
+        <h3>Dry Run</h3>
+
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+                <th>Included?</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>10</td>
+                <td>No - start se pehle</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>20</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>30</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>40</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>50</td>
+                <td>No - end excluded</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>4. Only Start Index</h2>
+
+        <pre><code>let fruits = ["Apple", "Mango", "Banana", "Orange"];
+
+console.log(fruits.slice(2));</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>["Banana", "Orange"]</code></pre>
+        </div>
+
+        <p>
+            Jab end index nahi dete, tab start index se lekar
+            array ke last element tak sab copy ho jaate hain.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. slice() Without Arguments</h2>
+
+        <pre><code>let arr = [1, 2, 3, 4];
+
+let copy = arr.slice();
+
+console.log(copy);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[1, 2, 3, 4]</code></pre>
+        </div>
+
+        <p>
+            Bina arguments ke slice() poore array ki shallow copy
+            banata hai.
+        </p>
+    </section>
+
+    <section>
+        <h2>6. Negative Index</h2>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+console.log(numbers.slice(-2));</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[40, 50]</code></pre>
+        </div>
+
+        <table>
+            <tr>
+                <th>Negative Index</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>-1</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>-2</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>-3</td>
+                <td>30</td>
+            </tr>
+        </table>
+
+        <p>Negative indexes array ke end se count hote hain.</p>
+    </section>
+
+    <section>
+        <h2>7. Original Array Remains Unchanged</h2>
+
+        <pre><code>let numbers = [10, 20, 30, 40, 50];
+
+let result = numbers.slice(1, 3);
+
+console.log(result);
+console.log(numbers);</code></pre>
+
+        <div class="output">
+            <b>Output:</b>
+            <pre><code>[20, 30]
+[10, 20, 30, 40, 50]</code></pre>
+        </div>
+
+        <div class="note">
+            slice() ek naya array return karta hai.
+            Original array ke elements remove nahi hote.
+        </div>
+    </section>
+
+    <section>
+        <h2>8. slice() vs splice()</h2>
+
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>slice()</th>
+                <th>splice()</th>
+            </tr>
+            <tr>
+                <td>Purpose</td>
+                <td>Part copy karna</td>
+                <td>Add/remove/replace karna</td>
+            </tr>
+            <tr>
+                <td>Original array</td>
+                <td>Unchanged</td>
+                <td>Usually changed</td>
+            </tr>
+            <tr>
+                <td>Return value</td>
+                <td>Selected elements</td>
+                <td>Removed elements</td>
+            </tr>
+        </table>
+
+        <pre><code>let arr = [10, 20, 30, 40];
+
+console.log(arr.slice(1, 3));
+// [20, 30]
+
+console.log(arr.splice(1, 2));
+// [20, 30]
+
+console.log(arr);
+// [10, 40]</code></pre>
+    </section>
+
+    <section>
+        <h2>9. Try It Yourself</h2>
+
+        <p>
+            Neeche button click karke slice() ka output dekho.
+            Code ko khud change karke bhi experiment kar sakte ho.
+        </p>
+
+        <pre><code>let colors = [
+    "Red", "Blue", "Green", "Yellow", "Black"
+];
+
+let result = colors.slice(1, 4);</code></pre>
+
+        <button onclick="showOutput()">Show Output</button>
+
+        <div id="demoOutput"></div>
+
+        <script>
+            function showOutput() {
+                let colors = [
+                    "Red", "Blue", "Green", "Yellow", "Black"
+                ];
+
+                let result = colors.slice(1, 4);
+
+                document.getElementById("demoOutput").textContent =
+                    JSON.stringify(result);
+            }
+        </script>
+    </section>
+
+    <section class="practice">
+        <h2>10. Practice Questions</h2>
+
+        <ol>
+            <li>
+                [5, 10, 15, 20, 25] mein se index 1 se 3 tak
+                elements nikalo.
+            </li>
+            <li>
+                Array ke last 3 elements slice() se kaise nikaloge?
+            </li>
+            <li>
+                Original array change kiye bina uski copy banao.
+            </li>
+            <li>
+                [10, 20, 30, 40, 50] par slice(-3, -1) ka output
+                predict karo.
+            </li>
+            <li>
+                slice() aur splice() ke beech do differences likho.
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Quick Revision</h2>
+
+        <ul>
+            <li>slice() array ka selected part copy karta hai.</li>
+            <li>Start index included hota hai.</li>
+            <li>End index excluded hota hai.</li>
+            <li>Negative indexes end se count hote hain.</li>
+            <li>Original array unchanged rehta hai.</li>
+            <li>slice() ek shallow copy banata hai.</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>JavaScript Learning Notes | Pushkar Kumar</p>
+    <p>Learn • Practice • Build • Repeat 🚀</p>
+</footer>
+
+<script src="slicearray.js"></script>
+
+</body>
+</html>
