@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(61, 109, 109);
+}
+
+p{
+    color: brown;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline white ;
+    text-underline-position: below;
+
+
+}
