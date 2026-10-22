@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nested For Loop — aasaan explanation</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, "Noto Sans Devanagari", sans-serif; color: #172033; background: #f4f7fb; }
+    body { margin: 0; padding: 32px 16px; }
+    main { max-width: 850px; margin: auto; background: white; padding: clamp(20px, 5vw, 42px); border-radius: 18px; box-shadow: 0 12px 40px #20305014; }
+    h1 { margin-top: 0; color: #174ea6; }
+    h2 { margin-top: 30px; }
+    p, li { line-height: 1.7; }
+    code, pre { font-family: ui-monospace, Consolas, monospace; }
+    pre { overflow-x: auto; padding: 18px; border-radius: 12px; background: #101828; color: #e5efff; line-height: 1.6; }
+    .note { padding: 14px 18px; background: #edf5ff; border-left: 4px solid #3778d4; border-radius: 8px; }
+    button { border: 0; border-radius: 9px; padding: 10px 16px; background: #1764c0; color: white; font: inherit; cursor: pointer; }
+    button:hover { background: #104e99; }
+    #output { min-height: 52px; margin-top: 14px; padding: 14px; background: #f1f4f8; border-radius: 10px; }
+    .grid { display: grid; grid-template-columns: repeat(4, minmax(44px, 1fr)); gap: 8px; max-width: 330px; }
+    .cell { text-align: center; padding: 12px 6px; background: #dcecff; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Nested <code>for</code> loop kya hota hai?</h1>
+    <p>Jab ek <code>for</code> loop ke andar doosra <code>for</code> loop likha ho, use <strong>nested for loop</strong> kehte hain. Bahari loop har baar chalta hai, aur uski har ek baar ki run ke andar andar wala loop poora chalta hai.</p>
+
+    <div class="note"><strong>Yaad rakho:</strong> Outer loop = rows (panktiyan), inner loop = har row ke items/columns.</div>
+
+    <h2>Example: 3 rows aur 4 columns</h2>
+    <pre><code>for (let row = 1; row &lt;= 3; row++) {
+  for (let col = 1; col &lt;= 4; col++) {
+    console.log(`row ${row}, column ${col}`);
+  }
+}</code></pre>
+    <p>Is example mein outer loop 3 baar chalta hai. Har baar inner loop 4 baar chalta hai. Isliye total <code>3 × 4 = 12</code> baar andar ka code chalega.</p>
+
+    <h2>Chalakar dekho</h2>
+    <p>Button dabane par JavaScript isi logic se 3 × 4 ka grid dikhayegi.</p>
+    <button id="run">Example chalao</button>
+    <div id="output" aria-live="polite">Yahan result dikhega.</div>
+
+    <h2>Loop ka flow</h2>
+    <ol>
+      <li><code>row = 1</code>: inner loop <code>col = 1</code> se <code>4</code> tak chalega.</li>
+      <li><code>row = 2</code>: inner loop phir se <code>1</code> se <code>4</code> tak chalega.</li>
+      <li><code>row = 3</code>: inner loop phir se poora chalega.</li>
+      <li>Phir outer loop ruk jaata hai, kyunki <code>row</code> ab <code>3</code> se bada ho jaata hai.</li>
+    </ol>
+    <p><strong>Use cases:</strong> grids, tables, multiplication tables, aur 2D arrays ke items par kaam karna.</p>
+  </main>
+  <script src="nested-for-loop.js"></script>
+</body>
+</html>
