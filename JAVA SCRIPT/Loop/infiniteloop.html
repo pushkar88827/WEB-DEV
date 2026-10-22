@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinite Loop in JavaScript</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; }
+    code, pre { background: #f1f3f5; border-radius: 4px; }
+    code { padding: 2px 5px; }
+    pre { padding: 16px; overflow-x: auto; }
+    .warning { border-left: 4px solid #d97706; padding: 10px 14px; background: #fff7ed; }
+  </style>
+</head>
+<body>
+  <h1>Infinite Loops in JavaScript</h1>
+
+  <p>
+    An infinite loop repeats forever because its stopping condition never becomes
+    false. Since JavaScript runs this loop on the page’s main thread, the browser
+    cannot respond to clicks or repaint the page while it is running.
+  </p>
+
+  <h2>Example</h2>
+  <pre><code>while (true) {
+  console.log("This keeps repeating");
+}</code></pre>
+
+  <p>
+    This loop never ends: <code>true</code> is always true, so the browser stays
+    busy running the loop.
+  </p>
+
+  <h2>A loop that stops</h2>
+  <pre><code>let count = 0;
+
+while (count &lt; 5) {
+  console.log(count);
+  count++;
+}</code></pre>
+
+  <p>
+    Here, <code>count</code> increases each time. Once it reaches 5, the condition
+    <code>count &lt; 5</code> becomes false, and the loop ends.
+  </p>
+
+  <aside class="warning">
+    <strong>Safety tip:</strong> Don’t run a literal infinite loop in a browser
+    page you care about. It can make the tab unresponsive. If it happens, close
+    the tab or stop the script in the developer tools.
+  </aside>
+
+  <script src="infiniteloop.js"></script>
+</body>
+</html>
