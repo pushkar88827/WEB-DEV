@@ -5,3 +5,11 @@ const student ={
     city: "Noida"
 
 };
+
+
+
+let delhi ={
+    latitude: 28.7041,
+    longitude: 77.1025,
+    country: "India"
+}
