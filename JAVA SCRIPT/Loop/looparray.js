@@ -1,0 +1,5 @@
+let fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]); 
+}
