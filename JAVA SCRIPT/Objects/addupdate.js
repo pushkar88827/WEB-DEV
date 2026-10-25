@@ -4,6 +4,7 @@ let std ={
     gender: "male",
     city: "Pune"
 }
+console.log(std.name);
 
 std.name = "ram";
 
