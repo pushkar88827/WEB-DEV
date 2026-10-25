@@ -9,3 +9,6 @@ console.log(std.name);
 std.name = "ram";
 
 console.log(std.name);
+
+delete std.city;
+console.log(std);
