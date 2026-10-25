@@ -3,6 +3,7 @@ const post ={
     content: "This is my first post",
     likes: 0,
     repost:110,
-    share:100
+    share:100,
+    tags:["#firstpost","#hello","#pushkar"]
      
 };
