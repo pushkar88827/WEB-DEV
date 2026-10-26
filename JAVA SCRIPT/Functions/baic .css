@@ -1,0 +1,27 @@
+h1{
+    color: red;
+    text-align: center;
+}
+
+p{
+    color: darkblue;
+    text-align: center;
+}
+
+*{
+    background-color: beige;
+
+}
+.box{
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: whitesmoke;
+}
+
+.box1{
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: rgb(132, 35, 35);
+}
