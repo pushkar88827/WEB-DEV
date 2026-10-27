@@ -1,11 +1,14 @@
 const calculator = {
-    add: function(a,b){
+    add(a,b){
         return a+b;
     },
-    sub: function(a,b){
+    sub(a,b){
         return a-b;
     },
-    mul: function(a,b){
+    mul(a,b){
         return a*b;
     },
 }
+
+
+calculator.add(5,6)
