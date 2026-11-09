@@ -113,7 +113,7 @@ a {
   text-decoration: none;
 }
 
-.lib-boxes{
+.box{
     min-height: 8rem;
     height: auto;
     background-color: #232323;
