@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Spotify - Web Player: Music for You</title>
+  <title>Spotify - Web Player</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
-    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" 
+  <link
+    rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
-    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
     crossorigin="anonymous"
-    referrerpolicy="no-referrer">
-   <link rel="icon" href="./Asssets/logo.png">
+    referrerpolicy="no-referrer"
+  >
 
+  <link rel="icon" href="./Asssets/logo.png">
 </head>
 
 <body>
   <div class="main">
-    <div class="sidebar">
-      <div class="nav">
+    <aside class="sidebar">
+      <nav class="nav">
         <div class="nav-option">
           <i class="fa-solid fa-house"></i>
           <a href="#">Home</a>
@@ -34,39 +36,211 @@
           <i class="fa-solid fa-magnifying-glass"></i>
           <a href="#">Search</a>
         </div>
-      </div>
+      </nav>
 
-      <div class="library">
+      <section class="library">
         <div class="options">
           <div class="lib-option nav-option">
-            <img src="./Asssets/logo.png">
+            <img src="./Asssets/library_icon.png" alt="">
             <a href="#">Your Library</a>
           </div>
 
           <div class="icons">
-            <i class="fa-solid fa-plus"></i>
-            <i class="fa-solid fa-arrow-right-long"></i>
+            <i class="fa-solid fa-plus" aria-label="Add"></i>
+            <i class="fa-solid fa-arrow-right-long" aria-label="Expand"></i>
           </div>
         </div>
 
         <div class="lib-boxes">
-            <div class="box">
+          <div class="box">
             <p class="box-p1">Create your first playlist</p>
-            <p class="box-p2">it`s easy, we`ll help you</p>
-            <button class ="badge">Create playlist</button>
-            </div>
-            <div class="box">
-            <p class="box-p1">Create your first playlist</p>
-            <p class="box-p2">it`s easy, we`ll help you</p>
-            <button class ="badge">Create playlist</button>
-            </div>
-            
+            <p class="box-p2">It's easy, we'll help you</p>
+            <button class="badge">Create playlist</button>
+          </div>
+
+          <div class="box">
+            <p class="box-p1">Let's find some podcasts to follow</p>
+            <p class="box-p2">We'll keep you updated on new episodes</p>
+            <button class="badge">Browse podcasts</button>
+          </div>
         </div>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="sticky-nav">
+        <div class="sticky-nav-icons">
+          <img src="./Asssets/backward_icon.png" alt="Back">
+          <img src="./Asssets/forward_icon.png" alt="Forward" class="hide">
+        </div>
+
+        <div class="sticky-nav-options">
+          <button class="badge nav-items hide">Explore Premium</button>
+
+          <button class="badge nav-items dark">
+            <i class="fa-solid fa-download"></i>
+            Install App
+          </button>
+
+          <i class="fa-solid fa-user user-icon" aria-label="Profile"></i>
+        </div>
+      </header>
+
+      <h2>Recently Played</h2>
+
+      <div class="card-container">
+        <article class="cards">
+          <img src="./Asssets/card1img.jpeg" alt="Top 50 Global" class="card-img">
+          <p class="card-title">Top 50 - Global</p>
+          <p class="card-subtitle">Your daily updates of the most played songs.</p>
+        </article>
+      </div>
+
+      <h2>Trending now near me</h2>
+
+      <div class="card-container">
+        <article class="cards">
+          <img src="./Asssets/card2img.jpeg" alt="Trending album" class="card-img">
+          <p class="card-title">Trending Mix</p>
+          <p class="card-subtitle">Popular music picked for you.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card3img.jpeg" alt="Trending album" class="card-img">
+          <p class="card-title">Daily Mix</p>
+          <p class="card-subtitle">Songs selected for your taste.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card4img.jpeg" alt="Trending album" class="card-img">
+          <p class="card-title">New Releases</p>
+          <p class="card-subtitle">Fresh music to listen to today.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card5img.jpeg" alt="Trending album" class="card-img">
+          <p class="card-title">Chill Hits</p>
+          <p class="card-subtitle">Relax with these popular tracks.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card1img.jpeg" alt="Trending album" class="card-img">
+          <p class="card-title">Top 50 - Global</p>
+          <p class="card-subtitle">Your daily updates of the most played songs.</p>
+        </article>
+      </div>
+
+      <h2>Featured Charts</h2>
+
+      <div class="card-container">
+        <article class="cards">
+          <img src="./Asssets/card2img.jpeg" alt="Top 50 Global" class="card-img">
+          <p class="card-title">Top 50 - Global</p>
+          <p class="card-subtitle">The most played songs around the world.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card3img.jpeg" alt="Top 50 India" class="card-img">
+          <p class="card-title">Top 50 - India</p>
+          <p class="card-subtitle">Popular tracks from India right now.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card4img.jpeg" alt="Featured chart" class="card-img">
+          <p class="card-title">Today's Top Hits</p>
+          <p class="card-subtitle">The biggest hits of the moment.</p>
+        </article>
+
+        <article class="cards">
+          <img src="./Asssets/card6img.jpeg" alt="Top songs India" class="card-img">
+          <p class="card-title">Top Songs - India</p>
+          <p class="card-subtitle">Popular songs from across India.</p>
+        </article>
+      </div>
+
+      <div class="nav-footer">
+        <div class="line"></div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="music-player">
+    <div class="album">
+      <img
+        src="./Asssets/card5img.jpeg"
+        alt="Daylight album cover"
+        class="album-cover"
+      >
+
+      <div class="song-info">
+        <h2 class="song-title">Daylight</h2>
+        <p class="song-artist">David Kushner</p>
+      </div>
+
+      <button class="icon-button" aria-label="Add to liked songs">
+        <i class="fa-regular fa-heart"></i>
+      </button>
+
+      <button class="icon-button cast-button" aria-label="Connect to a device">
+        <i class="fa-brands fa-chromecast"></i>
+      </button>
+    </div>
+
+    <div class="player">
+      <div class="player-controls">
+        <img src="./Asssets/player_icon1.png" alt="Shuffle" class="player-control-icon">
+        <img src="./Asssets/player_icon2.png" alt="Previous" class="player-control-icon">
+        <img
+          src="./Asssets/player_icon3.png"
+          alt="Play"
+          class="player-control-icon play-icon"
+        >
+        <img src="./Asssets/player_icon4.png" alt="Next" class="player-control-icon">
+        <img src="./Asssets/player_icon5.png" alt="Repeat" class="player-control-icon">
+      </div>
+
+      <div class="progress-bar">
+        <span class="curr-time">00:00</span>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="35"
+          class="progress-input"
+          aria-label="Song progress"
+        >
+
+        <span class="total-time">03:33</span>
       </div>
     </div>
 
-    <div class="main-content"></div>
-    <div class="music-player"></div>
-  </div>
+    <div class="controls">
+      <button class="control-button" aria-label="Connect to a device">
+        <i class="fa-solid fa-display"></i>
+      </button>
+
+      <button class="control-button" aria-label="Lyrics">
+        <i class="fa-solid fa-microphone"></i>
+      </button>
+
+      <button class="control-button" aria-label="Queue">
+        <i class="fa-solid fa-list"></i>
+      </button>
+
+      <button class="control-button" aria-label="Volume">
+        <i class="fa-solid fa-volume-high"></i>
+      </button>
+
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="60"
+        class="volume-slider"
+        aria-label="Volume"
+      >
+    </div>
+  </footer>
 </body>
 </html>
